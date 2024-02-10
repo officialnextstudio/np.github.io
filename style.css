@@ -7,7 +7,7 @@
 body {
     font-family: 'Outfit', sans-serif;
     background-color: #F0ECE5;
-    color: #161A30;
+    color: #232931;
     overflow: hidden;
     height: 100%;
     margin: 0;
@@ -18,14 +18,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #161A30;
+    border-bottom: 2px solid #232931;
 }
 
 .logo {
     text-align: center;
     padding: 10px 100px;
     background-color: #F0ECE5;
-    color: #161A30;
+    color: #232931;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,14 +54,14 @@ body {
 
 .navbar a {
     text-decoration: none;
-    color: #161A30;
+    color: #232931;
     font-weight: thin;
     font-size: 1.2rem;
     font-weight: 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #ffc107;
+    color: #232931;
 }
 
 /* Home-Message starts here */
@@ -75,24 +75,24 @@ body {
 .home-message h2 {
     font-size: 7rem;
     font-weight: 600;
-    color: #161A30;
+    color: #232931;
 }
 
 .home-message a.button {
     display: inline-block;
     font-size: 1.5rem;
-    color: #161A30;
+    color: #232931;
     background-color: #F0ECE5;
     padding: 10px 20px;
     text-decoration: none;
-    border: 2px solid #161A30;
+    border: 2px solid #232931;
     border-radius: 5px;
     margin-top: 30px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .home-message a.button:hover {
-    background-color: #161A30;
+    background-color: #232931;
     color: #F0ECE5;
 }
 
@@ -119,7 +119,7 @@ body {
 
 .under-construction a {
     text-decoration: none;
-    color: #000; /* Change text color to black */
+    color: #232931; /* Change text color to black */
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
@@ -137,7 +137,7 @@ body {
 .services {
     flex: 1;
     text-align: left;
-    padding: 100px 0 50px 100px;
+    padding: 50px 50px;
 }
 
 .services h1{
@@ -159,10 +159,10 @@ body {
 
 .topic-box {
     padding: 20px;
-    height: 325px;
+    height: auto;
     width: 300px;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    color: black;
+    color: #232931;
     border-radius: 10px;
     position: relative;
 }
@@ -252,42 +252,119 @@ body {
 
 /* Responsive Part Here */
 @media (max-width: 768px) {
+    body {
+        overflow: auto; /* Added to enable scrolling */
+    }
+
+    /* nav bar and logo */
     .header-container {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
+        padding: 10px 0;
     }
 
     .logo {
-        text-align: center;
-        padding: 10px;
+        padding: 5px 0;
+        color: #232931;
     }
 
     .navbar {
+        padding: 5px 0;
         justify-content: center;
+    }
+
+    .navbar ul {
+        flex-direction: row;
         align-items: center;
-        flex-direction: column;
-        text-align: center;
-        width: 100%;
-        background-color: #F0ECE5;
-        z-index: 100;
     }
 
     .navbar li {
-        margin-right: 0;
-        margin-left: 10px;
+        margin-right: 15px;
+        margin-bottom: 0px;
+    }
+
+    .navbar a {
+        font-size: rem;
+        color: #232931;
     }
 
     .home-message {
-        padding-top: 300px;
-        margin-top: 70px;
+        padding: 20px;
+        padding-top: 150px;
+        margin-top: 20px;
+        text-align: center;
     }
 
     .home-message h2 {
-        font-size: 4rem;
+        font-size: 3rem;
+        color: #232931;
     }
 
     .home-message a.button {
+        font-size: 1rem;
+        color: #232931;
+    }
+
+    /* UNder ocnstruction section or Gallery Section */
+    .under-construction {
+        text-align: center;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .under-construction h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .under-construction p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .under-construction a {
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    /* service page starts here */
+    .service-boxes {
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .topic-box {
+        height: 300px;
+        padding: 20px;
+        margin: 20px;
+    }
+
+    /* contact page starts here*/
+    .contact-content {
+        padding: 0 10px;
+    }
+
+    .contact-content h1 {
+        font-size: 3rem;
+    }
+
+    .contact-content p {
         font-size: 1.2rem;
     }
 
+    .gmail-section a {
+        font-size: 1.2rem;
+    }
+
+    .social-link {
+        font-size: 0.9rem;
+    }
 }
