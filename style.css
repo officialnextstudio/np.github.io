@@ -8,7 +8,6 @@ body {
     font-family: 'Outfit', sans-serif;
     background-color: #F0ECE5;
     color: #232931;
-    overflow: hidden;
     height: 100%;
     margin: 0;
 }
@@ -96,41 +95,67 @@ body {
     color: #F0ECE5;
 }
 
-/* Under construction*/
-.under-construction{
+/* Gallery style starts here */ 
+
+.gallery-one{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #232931;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.gallery-two {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #232931;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.gallery-three {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #232931;
+    text-align: center;
+    padding-top: 50px;
+}
+.gallery-container-one {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 100px;
+}
+
+.gallery-container-two {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px 100px;
+}
+
+.gallery-container-three {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px 300px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
+    justify-content: space-between;
 }
 
-.under-construction h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.under-construction p {
-    font-size: 1.5rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.under-construction a {
-    text-decoration: none;
-    color: #232931; /* Change text color to black */
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    display: inline-block;
-    transition: background-color 0.3s ease ;
-}
-
-.under-construction a:hover {
-    background-color: #232931;
-    color: white;
+.gallery-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 /* Service page starts here */
@@ -305,35 +330,13 @@ body {
         color: #232931;
     }
 
-    /* UNder ocnstruction section or Gallery Section */
-    .under-construction {
-        text-align: center;
-        padding: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
+    /* Gallery section starts here */
+    .gallery-container-one,
+    .gallery-container-two,
+    .gallery-container-three {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        padding: 50px 10px;
     }
-
-    .under-construction h1 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-    }
-
-    .under-construction p {
-        font-size: 1rem;
-        margin-bottom: 20px;
-    }
-
-    .under-construction a {
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-weight: bold;
-        font-size: 1rem;
-        display: inline-block;
-    }
-
     /* service page starts here */
     .service-boxes {
         grid-template-columns: repeat(1, 1fr);
@@ -346,7 +349,7 @@ body {
         padding: 20px;
         margin: 20px;
     }
-
+    
     /* contact page starts here*/
     .contact-content {
         padding: 0 10px;
